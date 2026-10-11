@@ -1,0 +1,4 @@
+-r requirements.txt
+# Type checker used by the IDE. Config lives in /pyrefly.toml.
+# (django-stubs is deliberately omitted — see the note in pyrefly.toml.)
+pyrefly==1.3.2

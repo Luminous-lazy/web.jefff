@@ -3,12 +3,23 @@ venv/
 .venv/
 env/
 db.sqlite3
+db.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
 __pycache__/
 *.py[cod]
 *.pyo
 *.egg-info/
 .pytest_cache/
 .mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# ---------- Django ----------
+staticfiles/
+media/
 
 # ---------- Node / Vite (frontend) ----------
 node_modules/
@@ -21,6 +32,13 @@ dist-ssr/
 .env
 .env.*
 !.env.example
+# Firebase Admin service-account keys — grant full project access, never commit
+*firebase-adminsdk*.json
+serviceAccountKey*.json
+service-account*.json
+backend/secrets/
+*.pem
+*.key
 
 # ---------- Logs ----------
 *.log

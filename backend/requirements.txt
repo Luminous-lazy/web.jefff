@@ -1,10 +1,5 @@
-blinker==1.9.0
-click==8.4.1
-colorama==0.4.6
-Flask==3.1.1
-flask-cors==5.0.1
-itsdangerous==2.2.0
-Jinja2==3.1.6
-MarkupSafe==3.0.3
-PyJWT==2.13.0
-Werkzeug==3.1.8
+Django==5.2.18
+djangorestframework==3.18.3
+django-cors-headers==4.9.0
+firebase_admin==7.7.0
+python-dotenv==1.1.1

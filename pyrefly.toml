@@ -1,0 +1,16 @@
+# Pyrefly (IDE type checker) config. Takes precedence over pyrightconfig.json.
+project-includes = ["backend/**/*.py"]
+project-excludes = ["backend/venv/**", "**/migrations/**", "**/__pycache__/**"]
+
+search-path = ["backend"]
+python-interpreter-path = "backend/venv/Scripts/python.exe"
+
+# Django/DRF ship without inline types. Don't infer narrow return types (e.g.
+# `Literal[True]`) from their unannotated source and then flag our overrides.
+untyped-def-behavior = "check-and-infer-return-any"
+
+[errors]
+# django-stubs / djangorestframework-stubs are intentionally NOT installed: with
+# Pyrefly 1.3.2 they produce ~40 false errors (model __init_subclass__, settings
+# __getattr__, as_view classonlymethod). Revisit when Pyrefly supports them.
+untyped-import = false
